@@ -52,7 +52,7 @@ dependencies:
 
   #设备信息、包信息
   #device_info: ^2.0.0 废弃
-  device_info_plus: ^3.2.2
+  device_info_plus: 8.2.2
   #package_info: ^2.0.0 废弃
   package_info_plus: ^1.4.0
 
@@ -129,13 +129,13 @@ dependencies:
 
   # third_app
   url_launcher: ^6.0.20 #启动第三方app
-  share_plus: ^3.1.0 #分享
+  share_plus: 6.3.4
   launch_review: ^3.0.1
   open_file: ^3.2.1
 
   # android权限弹窗
   #  permission_handler: ^3.3.0
-  permission_handler: ^9.1.0
+  permission_handler: 10.3.0
   #屏幕适配
   #flutter_screenutil: ^0.5.3
   #数据库
@@ -207,7 +207,8 @@ dependencies:
   #传感器
   sensors_plus: ^1.3.0
 
-
+dependencies_override:
+  ffi: 2.0.1
 
 dev_dependencies:
   flutter_test:

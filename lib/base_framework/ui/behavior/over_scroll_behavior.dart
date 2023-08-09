@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 /// dislodge the any subclass of ScrollView's inkwell
 /// 去除scroll view的 水印
 
-class OverScrollBehavior extends ScrollBehavior {
+class OverScrollBehavior extends MaterialScrollBehavior {
   @override
-  Widget buildViewportChrome(
-      BuildContext context, Widget child, AxisDirection axisDirection) {
+  Widget buildOverscrollIndicator(BuildContext context, Widget child, ScrollableDetails details) {
     switch (getPlatform(context)) {
       case TargetPlatform.iOS:
         return child;
@@ -19,13 +18,13 @@ class OverScrollBehavior extends ScrollBehavior {
           showLeading: false,
           //do not show tail's inkwell
           showTrailing: false,
-          axisDirection: axisDirection,
+          axisDirection: AxisDirection.down,
           color: Theme.of(context).accentColor,
         );
       case TargetPlatform.linux:
       case TargetPlatform.macOS:
       case TargetPlatform.windows:
     }
-    return super.buildViewportChrome(context, child, axisDirection);
+    return super.buildOverscrollIndicator(context, child, details);
   }
 }

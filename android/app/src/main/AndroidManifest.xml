@@ -55,7 +55,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" /> <!-- 自动升级获取文件uri -->
-        <provider
+        <!--provider
             tools:replace="android:authorities"
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.lijiaqi.flutter_bedrock.fileProvider"
@@ -64,7 +64,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
-        </provider>
+        </provider-->
     </application>
 
 </manifest>
